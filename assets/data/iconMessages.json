@@ -1,0 +1,67 @@
+{
+    "skill-python": {
+      "title": "Python: Programming Language",
+      "subtitle": "Used in data science and machine learning",
+      "description": "The language I have the most affinity with for working with data and process automation in general. I use various libraries like numpy, pandas and scikit-learn for statistics and AI models."
+      },
+    "skill-cpp": {
+      "title": "C++: Programming Language",
+      "subtitle": "Used to work with code abstraction",
+      "description": "Essential when performance is a crucial factor in developing libraries or applying algorithms using interoperability. Also relevant in creating artificial intelligence models."
+    },
+    "skill-tensorflow": {
+      "title": "Tensorflow: Framework",
+      "subtitle": "Used in AI modeling with Python",
+      "description": "Application of deep learning models such as sequential neural networks and generative AI. Useful for forecasting time series and data generation with models like LSTM, GRU and GAN."
+    },
+    "skill-html5": {
+      "title": "Html5: Standard Markup Language",
+      "subtitle": "Used to structure content on the web",
+      "description": "It's used to create the entire initial structure of a simple page. It consists of a series of elements, represented by tags, which are used to define the structure and content of a web page."
+    },
+    "skill-css3": {
+      "title": "Css3: Style Sheet Language",
+      "subtitle": "Used to stylize web pages",
+      "description": "After the structure of a page is created with HTML, it's possible to control the presentation and layout of the page with this language."
+    },
+    "skill-javascript": {
+      "title": "Javascript: Programming Language",
+      "subtitle": "Used for client-side scripting on the web",
+      "description": "Allows interactive and responsive web pages, web applications, and mobile applications, like what you're reading right now. In projects more focused on the frontend, it's common to see the combination of HTML, CSS and JavaScript languages to structure, style and add events to web pages."
+    },
+    "skill-git": {
+      "title": "Git: Version Control System",
+      "subtitle": "Used to manage project updates",
+      "description": "This is one of the most important Devops tools for project management. All the projects I do are organized with these tools and inserted or updated in Github's repository"
+    },
+    "skill-docker": {
+      "title": "Docker: Container Application Development",
+      "subtitle": "Software management in isolated environment",
+      "description": "It allows you to automate processes so that other users can execute projects without the need for manual management of resources such as dependency installations and configurations. I use docker-compose to manage multiple softwares in the same environment."
+    },
+    "skill-mysql": {
+      "title": "MySQL: SQL Database",
+      "subtitle": "Used for managing and retrieving data",
+      "description": "Commonly used in web applications, as well as in enterprise environments for data storage and management. Very useful for developing schemas to create normalized databases with MySQL Workbench."
+    },
+    "skill-postgresql": {
+      "title": "PostgreSQL: SQL Database",
+      "subtitle": "Used to store and scale data workloads",
+      "description": "One of the most advanced databases on the market for working with SQL. This is the bank I'm most familiar with for storing and managing data without the need for a graphical interface"
+    },
+    "skill-influxdb": {
+      "title": "InfluxDB: Time Series Database",
+      "subtitle": "Used for real-time data handling",
+      "description": "Efficient for storing and querying datasets that have temporal dependency. It's a NoSQL database that uses the Influx language to make queries, in addition to its structure being composed of measurements, series and points."
+    },
+    "skill-makefile": {
+      "title": "Makefile: Build automation tool",
+      "subtitle": "Used to control the build process of a project",
+      "description": "I use this tool to compile and link programs via interoperability, as well as integrate unit tests and automate tasks."
+    },
+    "skill-grafana": {
+      "title": "Grafana: Dashboards Web Application",
+      "subtitle": "Used for observability and data visualization",
+      "description": "This is my main tool for building interactive graphics for statistical or dynamic data analysis. It's generally used to monitor data behavior in real time for decision making. It supports most databases used on the market."
+    }
+}

@@ -8,4 +8,6 @@ The goal of this portfolio is to centralize the main projects I have developed a
 
 ### Credits
 
-The SVG icons were obtained from **Iconfinder** and **Devicon**. The project images were generated with Stable Diffusion.
+* SVG icons are from **Iconfinder** and **Devicon**.
+* Sound effects are from Pixabay.
+* Project images are generated with Stable Diffusion.
