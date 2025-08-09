@@ -116,7 +116,7 @@ section {
 
 .about-content p {
     font-size: 1.6rem;
-    margin-bottom: 3rem;
+    margin-bottom: 0.75rem;
 }
 
 .btn {
@@ -138,7 +138,7 @@ section {
 }
 
 .about-buttons {
-    margin-top: 5rem;
+    margin-top: 3rem;
     display: flex;
     gap: 3rem;
 }
@@ -270,7 +270,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), var(--third-bg-color));
+    background: linear-gradient(rgba(0, 0, 0, .5), var(--third-bg-color));
     border: .1rem transparent var(--third-bg-color);
     border-radius: .8rem;
     display: flex;
@@ -298,9 +298,15 @@ section {
 }
 
 .swiper-box p {
+    text-align: left;
     font-size: 1.6rem;
     margin: 1rem 0 1rem;
-    margin-bottom: 3rem;
+}
+
+.swiper-box ul {
+    text-align: left;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
 }
 
 .swiper-box img {
@@ -429,10 +435,6 @@ section {
         justify-items: center;
     }
 
-    .skills h2 {
-        display: none;
-    }
-
     .skills-box {
         margin-bottom: 1.5rem;
     }
@@ -443,8 +445,8 @@ section {
 
     .skills-info .info-box {
         margin: 0 auto;
-        height: 20rem;
-        width: 50rem;
+        height: 25rem;
+        width: 60rem;
         text-align: left;
         margin-bottom: 8rem;
     }
@@ -454,13 +456,8 @@ section {
     }
 
     .info-box span {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
-
-    .contact h2 {
-        display: none;
-    }
-
 }
 
 @media (max-width: 1050px) {
@@ -506,6 +503,10 @@ section {
 }
 
 @media (max-width: 695px) {
+    .navbar a {
+        font-size: 1.8rem;
+    }
+
     .portfolio {
         display: none;
     }
@@ -525,10 +526,6 @@ section {
 }
 
 @media (max-width: 500px) {
-    .navbar a {
-        font-size: 1.35rem;
-    }
-
     .about-content h1 {
         font-size: 4.2rem;
     }
@@ -543,15 +540,7 @@ section {
     }
 
     .about-buttons {
-        gap: 1rem;
-    }
-
-    .about-buttons a {
-        font-size: 1.35rem;
-    }
-
-    .skills-content h3 {
-        display: none;
+        gap: 1.5rem;
     }
 
     .skills-info .info-box {
@@ -579,38 +568,5 @@ section {
         width: 4rem;
         height: 4rem;
         margin-bottom: 3rem;
-    }
-}
-
-@media (max-width: 425px) {
-    .navbar a {
-        margin-left: 2rem;
-    }
-
-    .about-content h1 {
-        margin-top: 0;
-        margin-bottom: 1rem;
-    }
-
-    .about-content h3 {
-        display: none;
-    }
-
-    .about-buttons {
-        gap: .5rem;
-        margin-top: 0;
-    }
-
-    .about-buttons a {
-        font-size: .9rem;
-    }
-
-    .contact .input-box-large {
-        margin-bottom: 0 !important;
-    }
-
-    .contact .output button {
-        font-size: 1.35rem;
-        margin-top: 1rem;
     }
 }

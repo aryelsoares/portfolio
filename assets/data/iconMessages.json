@@ -1,67 +1,67 @@
 {
     "skill-python": {
       "title": "Python: Programming Language",
-      "subtitle": "Used in data science and machine learning",
-      "description": "The language I have the most affinity with for working with data and process automation in general. I use various libraries like numpy, pandas and scikit-learn for statistics and AI models."
+      "subtitle": "Data Science and Machine Learning",
+      "description": "I use Python to build data pipelines, develop machine learning models, and automate data-driven processes."
       },
     "skill-cpp": {
       "title": "C++: Programming Language",
-      "subtitle": "Used to work with code abstraction",
-      "description": "Essential when performance is a crucial factor in developing libraries or applying algorithms using interoperability. Also relevant in creating artificial intelligence models."
+      "subtitle": "High Performance and Interoperability",
+      "description": "I use C++ to develop high-performance libraries and APIs, especially when optimizing algorithms and enabling interoperability with other languages like Python. Ideal for computationally intensive tasks and low-level system design."
     },
     "skill-tensorflow": {
-      "title": "Tensorflow: Framework",
-      "subtitle": "Used in AI modeling with Python",
-      "description": "Application of deep learning models such as sequential neural networks and generative AI. Useful for forecasting time series and data generation with models like LSTM, GRU and GAN."
+      "title": "TensorFlow: Deep Learning Framework",
+      "subtitle": "Neural Network Modeling",
+      "description": "I use TensorFlow to build and train deep learning models. It supports tasks like time series forecasting, data generation, and AI experimentation through sequential and generative architectures."
     },
     "skill-html5": {
-      "title": "Html5: Standard Markup Language",
-      "subtitle": "Used to structure content on the web",
-      "description": "It's used to create the entire initial structure of a simple page. It consists of a series of elements, represented by tags, which are used to define the structure and content of a web page."
+      "title": "HTML5: Markup Language",
+      "subtitle": "Page Structure and Content",
+      "description": "I use HTML5 to define the structure of web pages, organizing content through semantic elements. It serves as the foundation for integrating design and interactivity in web-based applications."
     },
     "skill-css3": {
-      "title": "Css3: Style Sheet Language",
-      "subtitle": "Used to stylize web pages",
-      "description": "After the structure of a page is created with HTML, it's possible to control the presentation and layout of the page with this language."
+      "title": "CSS3: Style Sheet Language",
+      "subtitle": "Design and Layout for the Web",
+      "description": "CSS3 allows me to style and layout web pages with custom design, responsiveness, and visual consistency. I use it to ensure that web interfaces are both functional and aesthetically clear."
     },
     "skill-javascript": {
       "title": "Javascript: Programming Language",
-      "subtitle": "Used for client-side scripting on the web",
-      "description": "Allows interactive and responsive web pages, web applications, and mobile applications, like what you're reading right now. In projects more focused on the frontend, it's common to see the combination of HTML, CSS and JavaScript languages to structure, style and add events to web pages."
+      "subtitle": "Dynamic Behavior and Frontend Logic",
+      "description": "I use JavaScript to add interactivity to web pages, trigger events, and display analysis results dynamically. It complements HTML and CSS in frontend workflows, especially in building data-driven visual interfaces."
     },
     "skill-git": {
       "title": "Git: Version Control System",
-      "subtitle": "Used to manage project updates",
-      "description": "This is one of the most important Devops tools for project management. All the projects I do are organized with these tools and inserted or updated in Github's repository"
+      "subtitle": "Code Management and Collaboration",
+      "description": "I use Git to track changes, manage branches, and collaborate on code efficiently. Most of my projects are versioned and maintained through Git, often integrated with GitHub for remote repository hosting and CI/CD workflows."
     },
     "skill-docker": {
-      "title": "Docker: Container Application Development",
-      "subtitle": "Software management in isolated environment",
-      "description": "It allows you to automate processes so that other users can execute projects without the need for manual management of resources such as dependency installations and configurations. I use docker-compose to manage multiple softwares in the same environment."
+      "title": "Docker: Containerization Platform",
+      "subtitle": "Environment Automation and Portability",
+      "description": "I use Docker to containerize applications and ensure consistent environments across development and production. With Docker Compose, I orchestrate multi-container setups for projects involving databases, APIs, and data pipelines."
     },
     "skill-mysql": {
-      "title": "MySQL: SQL Database",
-      "subtitle": "Used for managing and retrieving data",
-      "description": "Commonly used in web applications, as well as in enterprise environments for data storage and management. Very useful for developing schemas to create normalized databases with MySQL Workbench."
+      "title": "MySQL: Relational Database",
+      "subtitle": "Ideal for Web and Lightweight Applications",
+      "description": "I use MySQL to design and manage relational databases, especially in projects with frontend integration. It’s effective for creating normalized schemas using tools like MySQL Workbench and suits small to medium-scale applications."
     },
     "skill-postgresql": {
-      "title": "PostgreSQL: SQL Database",
-      "subtitle": "Used to store and scale data workloads",
-      "description": "One of the most advanced databases on the market for working with SQL. This is the bank I'm most familiar with for storing and managing data without the need for a graphical interface"
+      "title": "PostgreSQL: Relational Database",
+      "subtitle": "Enterprise-Grade Data Management",
+      "description": "PostgreSQL is my go-to choice for scalable and robust database solutions. I use it in production-ready environments, often in Docker-based setups, due to its reliability, advanced features, and strong SQL compliance."
     },
     "skill-influxdb": {
       "title": "InfluxDB: Time Series Database",
-      "subtitle": "Used for real-time data handling",
-      "description": "Efficient for storing and querying datasets that have temporal dependency. It's a NoSQL database that uses the Influx language to make queries, in addition to its structure being composed of measurements, series and points."
+      "subtitle": "Real-Time Data Monitoring",
+      "description": "I use InfluxDB to store and query time series data efficiently, especially for system and application monitoring. It’s a NoSQL database optimized for time-stamped data and integrates well with tools like Grafana."
     },
-    "skill-makefile": {
-      "title": "Makefile: Build automation tool",
-      "subtitle": "Used to control the build process of a project",
-      "description": "I use this tool to compile and link programs via interoperability, as well as integrate unit tests and automate tasks."
+    "skill-bash": {
+      "title": "Bash: Build Automation Tool",
+      "subtitle": "Automates Compilation and Workflow Tasks",
+      "description": "I use Makefile to automate the build process, manage dependencies, compile C/C++ projects, and run tasks like testing or integration with other tools. It's essential for reproducible and efficient workflows."
     },
     "skill-grafana": {
-      "title": "Grafana: Dashboards Web Application",
-      "subtitle": "Used for observability and data visualization",
-      "description": "This is my main tool for building interactive graphics for statistical or dynamic data analysis. It's generally used to monitor data behavior in real time for decision making. It supports most databases used on the market."
+      "title": "Grafana: Data Visualization Platform",
+      "subtitle": "Observability and AI Monitoring",
+      "description": "Grafana is my main tool for creating interactive dashboards to visualize time series, system metrics, and AI results. I use it in MLOps pipelines to track model performance and infrastructure behavior in real time."
     }
 }

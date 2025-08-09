@@ -8,7 +8,7 @@
     <title>Aryel's Portfolio</title>
 
     <!-- FavIcon -->
-    <link rel="icon" type="image/svg+xml" href="/assets/images/icons/archlinux.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/images/icons/archlinux.svg">
 
     <!-- CSS -->
     <link href="css/style.css" rel="stylesheet">
@@ -42,19 +42,20 @@
     <!-- about section design -->
     <section class="about" id="about">
         <div class="about-content">
-            <h3>Hi! My Name is</h3>
+            <h3>👋 Hi! My Name is</h3>
             <h1>Aryel Soares.</h1>
-            <h3>I'm a Freelancer</h3>
-            <p>I am a backend-focused programmer dedicated to solving business problems. I specialize in building
-                tailored solutions for a wide range of business challenges, combining data-driven thinking
-                with flexible problem-solving across domains like automation, analytics, and AI. With a strong
-                background in backend development, I adapt quickly to diverse challenges across different industries,
-                always aiming to deliver efficient, scalable, and impactful solutions.
-            </p>
+            <h3>💼 I'm a Freelancer</h3>
+            <p>🧠 I am a backend-focused programmer dedicated to solving business problems.
+            <p>🎓 Graduated in applied mathematics, 🛠️ I specialize in building tailored solutions for
+                a wide range of business challenges, combining 📊 data-driven thinking with 🧩 flexible
+                problem-solving across domains like 🔄 automation, 📈 analytics, and 🤖 AI.</p>
+            <p>💻 With a strong background in backend development, I adapt quickly to diverse challenges
+                across different industries, always aiming to deliver ⚡ efficient, 📐 scalable,
+                and 🎯 impactful solutions.</p>
             <div class="about-buttons">
-                <a href="https://github.com/aryelsoares/portfolio/raw/main/data/curriculum.pdf" class="btn" title="Download CV in pdf"><i class="fa fa-book" aria-hidden="true"></i> Resume</a>
+                <a href="https://raw.githubusercontent.com/aryelsoares/portfolio/main/assets/data/curriculum.pdf" class="btn" title="Download CV in pdf"><i class="fa fa-book" aria-hidden="true"></i> Resume</a>
                 <a href="https://www.linkedin.com/in/aryelsoares" class="btn" title="Linkedin account of Aryel" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin-square" aria-hidden="true"></i> Linkedin</a>
-                <a href="https://www.github.com/aryelsoares" class="btn" title="Github account of Aryel" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+                <a href="https://www.github.com/aryelsoares" class="btn" title="GitHub account of Aryel" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
             </div>
         </div>
         <div class="about-img">
@@ -100,13 +101,13 @@
             <div class="skills-box">
                 <h3>Tools</h3>
                 <div class="skills-list">
-                    <img id="skill-makefile" src="assets/images/icons/makefile.svg" title="Makefile">
+                    <img id="skill-bash" src="assets/images/icons/bash.svg" title="Bash">
                     <img id="skill-grafana" src="assets/images/icons/grafana.svg" title="Grafana">
                 </div>
             </div>
         </div>
         <div class="skills-info">
-            <img src="https://github-readme-stats.vercel.app/api/top-langs?username=aryelsoares&layout=compact&langs_count=16&theme=dark&hide=jupyter%20notebook,tex" alt="Concepts">
+            <img src="https://github-readme-stats.vercel.app/api/top-langs?username=aryelsoares&layout=compact&langs_count=16&theme=dark&hide=jupyter%20notebook,tex" title="Language usage statistics" alt="Concepts">
             <div class="info-box"><span id="info"></span></div>
         </div>
     </section>
@@ -122,11 +123,18 @@
                     <img src="assets/images/stringler.png" alt="">
                     <div class="swiper-box">
                         <a href="https://github.com/aryelsoares/stringler" target="_blank" rel="noopener noreferrer"><i class="fa fa-external-link"></i> Stringler</a>
-                        <p>A tool designed to automate the analysis of text files using Natural Language Processing (NLP).</p>
+                        <p>Modular NLP pipeline that processes text files, performing sentiment analysis, extracting
+                           statistics, and generating graphical reports automatically.</p>
+                        <ul>
+                            <li>Sentiment analysis and word frequency extraction.</li>
+                            <li>Visual report generation with Matplotlib and Pillow.</li>
+                            <li>High-performance core via Pybind11.</li>
+                            <li>Tested with Pytest during build.</li>
+                        </ul>
                         <div class="skills-img">
                             <img src="assets/images/icons/cpp.svg" title="C++">
                             <img src="assets/images/icons/python.svg" title="Python">
-                            <img src="assets/images/icons/makefile.svg" title="Makefile">
+                            <img src="assets/images/icons/bash.svg" title="Bash">
                         </div>
                     </div>
                 </div>
@@ -135,7 +143,13 @@
                     <img src="assets/images/benchmark.png" alt="">
                     <div class="swiper-box">
                         <a href="https://github.com/aryelsoares/hardware-benchmark" target="_blank" rel="noopener noreferrer"><i class="fa fa-external-link"></i> Hardware Benchmark</a>
-                        <p>Observability system for real-time monitoring of hardware resources as CPU, GPU and RAM.</p>
+                        <p>Hardware-Benchmark is a real-time monitoring system that tracks CPU, GPU, and RAM metrics
+                            with high-frequency data collection and automated visualization.</p>
+                        <ul>
+                            <li>Collects 9 hardware metrics per second.</li>
+                            <li>Tracks CPU/GPU/RAM usage, temperature, and power.</li>
+                            <li>Automated pipeline for data collection, storage, and display.</li>
+                        </ul>
                         <div class="skills-img">
                             <img src="assets/images/icons/cpp.svg" title="C++">
                             <img src="assets/images/icons/influxdb.svg" title="InfluxDB">
@@ -149,7 +163,15 @@
                     <img src="assets/images/market.png" alt="">
                     <div class="swiper-box">
                         <a href="https://github.com/aryelsoares/supermarket-sales" target="_blank" rel="noopener noreferrer"><i class="fa fa-external-link"></i> Supermarket Sales</a>
-                        <p>Develop a database from CSV file related to supermarket branch sales and perform general analysis of the data.</p>
+                        <p>Supermarket Sales is a data analysis project focused on sales records from three
+                           supermarket branches over a 3-month period. The data is migrated to a structured
+                           database and analyzed using clustering and time series methods.</p>
+                        <ul>
+                            <li>Migrated raw data to a relational database.</li>
+                            <li>Performed general exploratory analysis of sales.</li>
+                            <li>Grouped total price by customer rating using k-means clustering.</li>
+                            <li>Analyzed gross income trends per branch with time series.</li>
+                        </ul>
                         <div class="skills-img">
                             <img src="assets/images/icons/python.svg" title="Python">
                             <img src="assets/images/icons/mysql.svg" title="MySQL">

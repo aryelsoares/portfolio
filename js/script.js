@@ -53,13 +53,24 @@ function animateText(text) {
     lastText = text;
 }
 
-animateText("Move cursor around icons to get info.") // default text
+let canShowDescription = false;
+
+window.addEventListener("click", () => {
+    canShowDescription = true;
+});
 
 function formatIconMessage({title, subtitle, description}) {
-    return `<span style="color: #AAFFFF;"<h3>${title}</h3></span><br><br>
-            <span style="color: #DDFFFF;"<h4>${subtitle}</h4></span><br><br>
+    return `<span style="text-align: center; color: #AAFFFF"><h3>${title}</h3></span><br>
+            <span style="text-align: center; color: #DDFFFF"><h4>${subtitle}</h4></span><br>
             ${description}`;
 }
+
+// default text
+animateText(formatIconMessage({
+    title: "⚙️ Skill Descriptions ⚙️",
+    subtitle: "💡 Interact with the page to enable it!",
+    description: "Move cursor around icons to get quick information about the use of these technologies in my projects."
+}));
 
 const iconSound = document.getElementById('icon-sound');
 
@@ -71,8 +82,10 @@ fetch('assets/data/iconMessages.json')
             if (iconElement) {
                 iconElement.addEventListener("mouseover", () => {
                     const message = formatIconMessage(iconMessages[iconId]);
-                    animateText(message);
-                    soundPlay(iconSound);
+                    if (canShowDescription) {
+                        animateText(message);
+                        soundPlay(iconSound);
+                    }
                 });
             }
         });
@@ -90,8 +103,7 @@ let swiper = new Swiper('.swiper-container', {
     pagination: {
         el: ".swiper-pagination",
         clickable: true
-    },
-    keyboard: true
+    }
 });
 
 /*===== working contact form =====*/
