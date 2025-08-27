@@ -1,0 +1,122 @@
+[
+    {
+        "category": "Backend",
+        "color": "#E63946",
+        "skills": [
+            {
+                "label": "cpp",
+                "title": "C++: Programming Language",
+                "subtitle": "High Performance and Interoperability",
+                "description": "I use C++ to develop high-performance libraries and APIs, especially when optimizing algorithms and enabling interoperability with other languages like Python. Ideal for computationally intensive tasks and low-level system design."
+            },
+            {
+                "label": "python",
+                "title": "Python: Programming Language",
+                "subtitle": "Data Science and Machine Learning",
+                "description": "I use Python to build data pipelines, develop machine learning models, and automate data-driven processes."
+            },
+            {
+                "label": "tensorflow",
+                "title": "TensorFlow: Deep Learning Framework",
+                "subtitle": "Neural Network Modeling",
+                "description": "I use TensorFlow to build and train deep learning models. It supports tasks like time series forecasting, data generation, and AI experimentation through sequential and generative architectures."
+            },
+            {
+                "label": "nodejs",
+                "title": "NodeJS: Backend Runtime Environment",
+                "subtitle": "Server-Side Development",
+                "description": "I use NodeJS to build fast and scalable backend services. It enables the creation of RESTful APIs, real-time applications with WebSockets, and efficient data handling with databases."
+            }
+        ]
+    },
+    {
+        "category": "Frontend",
+        "color": "#06D6A0",
+        "skills": [
+            {
+                "label": "javascript",
+                "title": "Javascript: Programming Language",
+                "subtitle": "Dynamic Behavior and Frontend Logic",
+                "description": "I use JavaScript to add interactivity to web pages, trigger events, and display analysis results dynamically. It complements HTML and CSS in frontend workflows, especially in building data-driven visual interfaces."
+            },
+            {
+                "label": "typescript",
+                "title": "TypeScript: Typed JavaScript Superset",
+                "subtitle": "Strong Typing and Code Reliability",
+                "description": "I use TypeScript to add static typing and better tooling to JavaScript projects. It improves code reliability, maintainability, and scalability by preventing common runtime errors."
+            },
+            {
+                "label": "react",
+                "title": "React: UI 'Framework'",
+                "subtitle": "Web user interface",
+                "description": "Build user interfaces out of individual pieces called components written in JavaScript."
+            },
+            {
+                "label": "tailwind",
+                "title": "Tailwind: Utility-first CSS framework",
+                "subtitle": "Fast development of modern websites",
+                "description": "Enable rapid development of modern websites directly within HTML markup."
+            }
+        ]
+    },
+    {
+        "category": "Devops",
+        "color": "#118AB2",
+        "skills": [
+            {
+                "label": "bash",
+                "title": "Bash: Build Automation Tool",
+                "subtitle": "Automates Compilation and Workflow Tasks",
+                "description": "I use Makefile to automate the build process, manage dependencies, compile C/C++ projects, and run tasks like testing or integration with other tools. It's essential for reproducible and efficient workflows."
+            },
+            {
+                "label": "git",
+                "title": "Git: Version Control System",
+                "subtitle": "Code Management and Collaboration",
+                "description": "I use Git to track changes, manage branches, and collaborate on code efficiently. Most of my projects are versioned and maintained through Git, often integrated with GitHub for remote repository hosting and CI/CD workflows."
+            },
+            {
+                "label": "docker",
+                "title": "Docker: Containerization Platform",
+                "subtitle": "Environment Automation and Portability",
+                "description": "I use Docker to containerize applications and ensure consistent environments across development and production. With Docker Compose, I orchestrate multi-container setups for projects involving databases, APIs, and data pipelines."
+            }
+        ]
+    },
+    {
+        "category": "Storage",
+        "color": "#FFD166",
+        "skills": [
+            {
+                "label": "mysql",
+                "title": "MySQL: Relational Database",
+                "subtitle": "Ideal for Web and Lightweight Applications",
+                "description": "I use MySQL to design and manage relational databases, especially in projects with frontend integration. It’s effective for creating normalized schemas using tools like MySQL Workbench and suits small to medium-scale applications."
+            },
+            {
+                "label": "postgres",
+                "title": "PostgreSQL: Relational Database",
+                "subtitle": "Enterprise-Grade Data Management",
+                "description": "PostgreSQL is my go-to choice for scalable and robust database solutions. I use it in production-ready environments, often in Docker-based setups, due to its reliability, advanced features, and strong SQL compliance."
+            },
+            {
+                "label": "influxdb",
+                "title": "InfluxDB: Time Series Database",
+                "subtitle": "Real-Time Data Monitoring",
+                "description": "I use InfluxDB to store and query time series data efficiently, especially for system and application monitoring. It’s a NoSQL database optimized for time-stamped data and integrates well with tools like Grafana."
+            }
+        ]
+    },
+    {
+        "category": "Tools",
+        "color": "#8338EC",
+        "skills": [
+            {
+                "label": "grafana",
+                "title": "Grafana: Data Visualization Platform",
+                "subtitle": "Observability and AI Monitoring",
+                "description": "Grafana is my main tool for creating interactive dashboards to visualize time series, system metrics, and AI results. I use it in MLOps pipelines to track model performance and infrastructure behavior in real time."
+            }
+        ]
+    }
+]

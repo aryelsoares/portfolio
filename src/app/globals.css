@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #181818;
+  --background-second: #2b2b2b;
+  --background-third: #444546;
+  --foreground: #ffffff;
+  --trigger: #00aaff;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+}
+
+.my-quill .ql-container {
+  @apply w-full pb-12 !text-[1.6rem] text-text bg-bg-second !rounded-xl !border !border-[#444546] my-2;
+}
+
+.my-quill .ql-editor {
+  @apply text-text font-poppins bg-bg-second border-none min-h-[300px] max-h-[300px] overflow-hidden;
+}
+
+.my-quill .ql-blank::before {
+  @apply !text-text !opacity-50
+}
+
+.my-quill .ql-toolbar {
+  @apply bg-bg border !border-[#444546] !rounded-xl mb-2 flex justify-center;
+}
+
+html.swal2-shown .site-header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+html.swal2-shown body {
+  padding-top: 7.8rem;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-bg: var(--background);
+  --color-bg-second: var(--background-second);
+  --color-bg-third: var(--background-third);
+  --color-text: var(--foreground);
+  --color-main: var(--trigger);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --font-poppins: "Poppins", sans-serif;
+
+  --animate-swing: swing 0.5s linear infinite;
+
+  @keyframes swing {
+    0%    { transform: rotate(0deg); }
+    25%   { transform: rotate(8deg); }
+    75%   { transform: rotate(-8deg); }
+    100%  { transform: rotate(0deg); }
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }

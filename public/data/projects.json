@@ -1,0 +1,28 @@
+[
+    {
+        "title": "Stringler",
+        "description": "Modular NLP pipeline that processes text files, performing sentiment analysis, extracting statistics, and generating graphical reports automatically.",
+        "info": ["Sentiment analysis and word frequency extraction.",
+                 "Visual report generation with Matplotlib and Pillow.",
+                 "High-performance core via Pybind11.",
+                 "Tested with Pytest during build."],
+        "skills": ["cpp", "python", "bash"]
+    },
+    {
+        "title": "Hardware-Benchmark",
+        "description": "Hardware-Benchmark is a real-time monitoring system that tracks CPU, GPU, and RAM metrics.",
+        "info": ["Collects 9 hardware metrics per second.",
+                 "Tracks CPU/GPU/RAM usage, temperature, and power.",
+                 "Automated pipeline for data collection, storage, and display."],
+        "skills": ["cpp", "influxdb", "grafana", "docker"]
+    },
+    {
+        "title": "Supermarket-Sales",
+        "description": "Supermarket Sales is a data analysis project focused on sales records from three supermarket branches over a 3-month period. The data is migrated to a structured database and analyzed using clustering and time series methods.",
+        "info": ["Migrated raw data to a relational database.",
+                 "Performed general exploratory analysis of sales.",
+                 "Grouped total price by customer rating using k-means clustering.",
+                 "Analyzed gross income trends per branch with time series."],
+        "skills": ["python", "mysql"]
+    }
+]
