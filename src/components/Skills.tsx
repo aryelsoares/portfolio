@@ -16,7 +16,7 @@ interface IconData {
 }
 
 interface SkillInfo {
-    category: string; color: string; skills: IconData[];
+    category: string; skills: IconData[];
 }
 
 export default function Skills() {
@@ -47,8 +47,8 @@ export default function Skills() {
 
     function formatIconMessage({ title, subtitle, description }: IconMessage) {
         return `
-            <span style="text-align: center; color: #AAFFFF"><h3>${title}</h3></span><br>
-            <span style="text-align: center; color: #DDFFFF"><h4>${subtitle}</h4></span><br>
+            <span style="text-align: center; font-size: 1.8rem; color: #aaffff;"><p>${title}</p></span><br>
+            <span style="text-align: center; font-size: 1.6rem; color: #ddffff;"><p>${subtitle}</p></span><br>
             ${description}
         `;
     }
@@ -67,7 +67,7 @@ export default function Skills() {
                 title: "⚙️ Skill Descriptions ⚙️",
                 subtitle: "✅ Interaction enabled!",
                 description: "Move cursor around icons to get quick information about the use of these technologies in my projects.",
-            }))
+            }));
         }
 
         const handleClick = () => {
@@ -85,27 +85,27 @@ export default function Skills() {
     return (
         <section
             id="skills"
-            className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto py-50"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-[20rem] max-w-7xl mx-auto py-[1%] lg:py-[7.5%] mb-20"
         >
             {/* First Column */}
             <div className="flex flex-col items-center">
                 {/* Head */}
-                <h2 className="text-[3.6rem] mb-20 text-[#bbffff]">Technical Skills</h2>
+                <h2 className="text-[2.8rem] md:text-[3.2rem] lg:text-[3.6rem] mb-5 lg:mb-20 text-[#bbffff]">Technical Skills</h2>
                 {/* Skills Data */}
-                <div className="flex flex-col gap-12">
-                    {skillsData.map(({ category, color, skills }: SkillInfo) => (
+                <div className="flex flex-col gap-4 lg:gap-12">
+                    {skillsData.map(({ category, skills }: SkillInfo) => (
                         <div key={category} className="flex items-center gap-8">
                             {/* Category */}
-                            <h3 className="w-48 text-end text-[2.4rem]" style={{ color }}>{category}</h3>
+                            <h3 className="w-48 text-end text-[2.4rem] font-bold text-[#ddffff]">{category}</h3>
                             {/* Skill Icons */}
                             <div className="flex flex-wrap w-max p-4 bg-bg border border-bg-third rounded-[.8rem] justify-center">
                                 {skills.map(({ label, title, subtitle, description }: IconData) => (
                                     <Image
                                         key={label}
-                                        className="mx-4 transition-transform duration-300 ease-in-out hover:animate-swing"
+                                        className="mx-4 w-[40px] lg:w-[50px] h-auto transition-transform duration-300 ease-in-out hover:animate-swing"
                                         src={`/images/icons/${label}.svg`}
                                         title={title}
-                                        alt=""
+                                        alt={label}
                                         width="50"
                                         height="50"
                                         onMouseOver={() => {
@@ -124,18 +124,21 @@ export default function Skills() {
             {/* Second Column */}
             <div className="self-center flex flex-col items-center gap-8">
                 {/* Stats */}
-                <img
-                    className="ml-60"
-                    src="https://github-readme-stats.vercel.app/api/top-langs?username=aryelsoares&layout=compact&langs_count=16&theme=dark&hide=jupyter%20notebook,tex"
-                    title="Language usage statistics"
-                    alt="Concepts"
-                    width="280"
-                    height="280"
-                />
+                <div className="w-[45rem] flex justify-center">
+                    {/* eslint-disable @next/next/no-img-element */}
+                    <img
+                        src="https://github-readme-stats.vercel.app/api/top-langs?username=aryelsoares&layout=compact&langs_count=16&theme=dark&hide=jupyter%20notebook,tex"
+                        title="Language usage statistics"
+                        className="hidden lg:flex"
+                        alt="Concepts"
+                        width="280"
+                        height="280"
+                    />
+                </div>
                 {/* Skill Box */}
                 <div
                     id="info"
-                    className="ml-60 w-180 h-128 px-4 py-4 text-[1.6rem] bg-bg-second border border-bg-third rounded-[.8rem]"
+                    className="w-[45rem] h-128 px-4 py-4 text-[1.6rem] bg-bg-second border border-bg-third rounded-[.8rem]"
                 >
                     <span ref={infoRef} id="info-typed" />
                 </div>

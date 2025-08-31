@@ -25,9 +25,8 @@ export default function Contact() {
             toolbar: [
                 [{ size: ["small", false, "large", "huge"] }],
                 ["bold", "italic", { color: [] }, { background: [] }],
-                [{ list: "ordered" }, { list: "bullet" }],
+                [{ list: "ordered" }, { list: "bullet" }, { list: "check" }],
                 ["link"],
-                ["clean"],
             ],
         }),
         []
@@ -37,6 +36,9 @@ export default function Contact() {
         () => ["size", "bold", "italic", "color", "background", "list", "link"],
         []
     );
+
+    const charMin = 30;
+    const charMax = 1000;
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -53,12 +55,12 @@ export default function Contact() {
         setIsSending(true);
 
         // validate message size
-        if (message.length < 30 || message.length > 10e3) {
+        if (message.length < charMin || message.length > charMax) {
             errorSnd();
             Swal.fire({
                 icon: "error",
                 title: "Error",
-                text: "Message size must be between 30-1000 characters",
+                text: `Message size must be between ${charMin}-${charMax} characters`,
                 scrollbarPadding: false,
             });
             setIsSending(false);
@@ -106,8 +108,8 @@ export default function Contact() {
 
     return (
         <section id="contact">
-            <div className="flex flex-col items-center">
-                <h2 className="text-[3.8rem] mt-20 mb-12 text-center text-[#bbffff]">Contact Form</h2>
+            <div className="flex flex-col items-center px-4 py-[5%] lg:py-[2.5%]">
+                <h2 className="text-[2.8rem] md:text-[3.4rem] lg:text-[3.8rem] mb-12 text-center text-[#bbffff]">Contact Form</h2>
 
                 <form className="max-w-[70rem] mx-auto my-4 text-center mb-12" action="#" autoComplete="off" onSubmit={handleSubmit} onReset={handleReset}>
                     <div className="flex justify-between flex-wrap">

@@ -53,19 +53,19 @@ export default function Header() {
     return (
         <header
             className={`sticky top-0 py-8 px-[9%] flex justify-between items-center bg-bg-second transition-all duration-300 border-b z-100 site-header ${
-                isSticky ? "border-[#444546]" : "border-transparent"
+                isSticky ? "border-bg-third" : "border-transparent"
             }`}
         >
-            <a href="#" className="flex items-center gap-2 text-[2.5rem] text-text">
-                <Image src="/logo.png" alt="Logo" width={25} height={25} />
-                Aryel&apos;s Portfolio
+            <a href="#" className="hidden md:flex items-center gap-2 md:text-[1.6rem] lg:text-[2.4rem] text-text">
+                <Image src="/logo.png" className="hidden md:inline" alt="Logo" width={25} height={25} />
+                <span className="hidden md:inline font-bold">Aryel Soares</span>
             </a>
-            <nav>
+            <nav className="flex-1 flex justify-center md:justify-end">
                 {navItems.map((item) => (
                     <a
                         key={item.id}
                         href={`#${item.id}`}
-                        className={`text-[1.7rem] ml-16 transition-colors duration-300 hover:text-main ${
+                        className={`text-[1.4rem] md:text-[1.6rem] lg:text-[1.8rem] ml-8 md:ml-12 lg:ml-16 transition-colors duration-300 hover:text-main ${
                             activeSection === item.id ? "text-main" : "text-text"
                         }`}
                         onClick={hoverSnd}

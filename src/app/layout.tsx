@@ -8,8 +8,10 @@ import Footer from "@/components/Footer";
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '600'] });
 
 export const metadata: Metadata = {
-  title: "Aryel Portfolio",
-  description: "Personal",
+  title: "Aryel Soares",
+  description: "Personal portfolio showcasing skills and projects related to data science, process automation and artificial intelligence.",
+  authors: [{ name: "Aryel Soares" }],
+  keywords: ["Portfolio", "C++", "Python", "JavaScript", "TypeScript", "Data Science", "Machine Learning"],
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

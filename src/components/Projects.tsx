@@ -24,9 +24,9 @@ export default function Projects() {
     const swipeSnd = useSound("swipe");
 
     return (
-        <section id="projects" className="text-center py-20">
+        <section id="projects" className="text-center px-4 py-[5%] lg:py-[2.5%] mb-12">
             {/* Header */}
-            <h2 className="text-[3.6rem] mb-16 text-[#bbffff]">Latest Projects</h2>
+            <h2 className="text-[2.8rem] md:text-[3.2rem] lg:text-[3.6rem] mb-16 text-[#bbffff]">Latest Projects</h2>
             {/* Swiper */}
             <Swiper
                 modules={[Navigation, Pagination]}
@@ -51,16 +51,16 @@ export default function Projects() {
                             <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.5),#444546)] border border-bg-third rounded-lg flex flex-col justify-center items-center text-center px-16 py-0 translate-y-full transition-transform duration-1000 ease-in-out group-[.swiper-slide-active]:translate-y-0 will-change-transform">
                                 {/* Title */}
                                 <a
-                                    className="text-[3rem] text-[#ccffff] transition duration-300 hover:text-main"
+                                    className="text-[2.6rem] md:text-[2.8rem] lg:text-[3rem] text-[#ccffff] transition duration-300 hover:text-main"
                                     href={`https://github.com/aryelsoares/${title}`}
                                     target="_blank"
                                 >
                                     <FontAwesomeIcon icon={faExternalLink} className="mr-2" /> {title}
                                 </a>
                                 {/* Description */}
-                                <p className="text-start text-[1.6rem] my-4">{description}</p>
+                                <p className="text-start text-[1.5rem] lg:text-[1.6rem] my-4">{description}</p>
                                 {/* List */}
-                                <ul className="list-disc list-inside text-start text-[1.6rem] mb-8">
+                                <ul className="list-disc list-inside text-start text-[1.4rem] md:text-[1.5rem] lg:text-[1.6rem] mb-8">
                                     {info.map((list, i) => (
                                         <li key={i}>{list}</li>
                                     ))}

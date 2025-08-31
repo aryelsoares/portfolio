@@ -1,7 +1,6 @@
 [
     {
         "category": "Backend",
-        "color": "#E63946",
         "skills": [
             {
                 "label": "cpp",
@@ -31,7 +30,6 @@
     },
     {
         "category": "Frontend",
-        "color": "#06D6A0",
         "skills": [
             {
                 "label": "javascript",
@@ -49,25 +47,24 @@
                 "label": "react",
                 "title": "React: UI 'Framework'",
                 "subtitle": "Web user interface",
-                "description": "Build user interfaces out of individual pieces called components written in JavaScript."
+                "description": "I use React to build dynamic and reusable user interfaces by composing components. It simplifies state management, enables efficient updates, and supports building scalable single-page applications."
             },
             {
                 "label": "tailwind",
                 "title": "Tailwind: Utility-first CSS framework",
                 "subtitle": "Fast development of modern websites",
-                "description": "Enable rapid development of modern websites directly within HTML markup."
+                "description": "I use Tailwind to style web applications quickly with utility classes. It speeds up development, ensures responsive design, and allows creating modern layouts without leaving the HTML structure."
             }
         ]
     },
     {
         "category": "Devops",
-        "color": "#118AB2",
         "skills": [
             {
                 "label": "bash",
                 "title": "Bash: Build Automation Tool",
                 "subtitle": "Automates Compilation and Workflow Tasks",
-                "description": "I use Makefile to automate the build process, manage dependencies, compile C/C++ projects, and run tasks like testing or integration with other tools. It's essential for reproducible and efficient workflows."
+                "description": "I use Bash in the Linux terminal to automate tasks, manage workflows, and write scripts for compilation, testing, and system management. It is an essential tool for efficient development and everyday operations in a Linux environment."
             },
             {
                 "label": "git",
@@ -85,7 +82,6 @@
     },
     {
         "category": "Storage",
-        "color": "#FFD166",
         "skills": [
             {
                 "label": "mysql",
@@ -109,7 +105,6 @@
     },
     {
         "category": "Tools",
-        "color": "#8338EC",
         "skills": [
             {
                 "label": "grafana",

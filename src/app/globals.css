@@ -16,7 +16,11 @@ html {
 }
 
 .my-quill .ql-container {
-  @apply w-full pb-12 !text-[1.6rem] text-text bg-bg-second !rounded-xl !border !border-[#444546] my-2;
+  @apply w-full pb-12 !text-[1.6rem] text-text bg-bg-second !rounded-lg !border !border-bg-third my-2;
+}
+
+.my-quill:focus-within .ql-container {
+  @apply !border-text;
 }
 
 .my-quill .ql-editor {
@@ -28,7 +32,7 @@ html {
 }
 
 .my-quill .ql-toolbar {
-  @apply bg-bg border !border-[#444546] !rounded-xl mb-2 flex justify-center;
+  @apply bg-bg border !border-bg-third !rounded-xl mb-2 flex justify-center;
 }
 
 html.swal2-shown .site-header {
