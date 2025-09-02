@@ -39,7 +39,7 @@ export default function Projects() {
             >
                 {projectsData.map(({ title, description, info, skills }: ProjectInfo) => (
                     <SwiperSlide key={title} className="group">
-                        <div className="relative w-full h-[55rem] flex justify-center items-center">
+                        <div className="relative w-full h-[40rem] sm:h-[55rem] flex justify-center items-center">
                             {/* Project Image */}
                             <Image
                                 src={`/images/projects/${title}.png`}
@@ -51,26 +51,26 @@ export default function Projects() {
                             <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.5),#444546)] border border-bg-third rounded-lg flex flex-col justify-center items-center text-center px-16 py-0 translate-y-full transition-transform duration-1000 ease-in-out group-[.swiper-slide-active]:translate-y-0 will-change-transform">
                                 {/* Title */}
                                 <a
-                                    className="text-[2.6rem] md:text-[2.8rem] lg:text-[3rem] text-[#ccffff] transition duration-300 hover:text-main"
+                                    className="text-[2.4rem] sm:text-[2.6rem] md:text-[2.8rem] lg:text-[3rem] text-[#ccffff] transition duration-300 hover:text-main"
                                     href={`https://github.com/aryelsoares/${title}`}
                                     target="_blank"
                                 >
                                     <FontAwesomeIcon icon={faExternalLink} className="mr-2" /> {title}
                                 </a>
                                 {/* Description */}
-                                <p className="text-start text-[1.5rem] lg:text-[1.6rem] my-4">{description}</p>
+                                <p className="text-start text-[1.3rem] sm:text-[1.5rem] lg:text-[1.6rem] my-4">{description}</p>
                                 {/* List */}
-                                <ul className="list-disc list-inside text-start text-[1.4rem] md:text-[1.5rem] lg:text-[1.6rem] mb-8">
+                                <ul className="list-disc list-inside text-start text-[1.2rem] sm:text-[1.4rem] md:text-[1.5rem] lg:text-[1.6rem] mb-8">
                                     {info.map((list, i) => (
                                         <li key={i}>{list}</li>
                                     ))}
                                 </ul>
-                                {/* Skills */}
+                                {/* Skills  */}
                                 <div>
                                     {skills.map((skill, index) => (
                                         <Image
                                             key={`${skill}-${index}`}
-                                            className="m-2 inline-block"
+                                            className="m-2 inline-block w-[35px] sm:w-[50px] h-auto"
                                             src={`/images/icons/${skill}.svg`}
                                             title={skill}
                                             alt={skill}

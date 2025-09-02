@@ -21,31 +21,27 @@ interface SkillInfo {
 
 export default function Skills() {
     const iconSnd = useSound("icon");
-    
     const typedRef = useRef<Typed | null>(null);
-    let lastText = "";
+    const lastTextRef = useRef<string>("");
 
     const infoRef = useRef<HTMLSpanElement>(null);
+    const [canShowDescription, setCanShowDescription] = useState(false);
+    const [activeSkill, setActiveSkill] = useState<string | null>(null);
 
     function animateText(text: string): void {
         if (!infoRef.current) return;
+        if (text === lastTextRef.current) return;
 
-        if (text === lastText) return;
-
-        if (typedRef.current) {
-            typedRef.current.destroy();
-            typedRef.current = null;
-        }
-
+        typedRef.current?.destroy();
         typedRef.current = new Typed(infoRef.current, {
             strings: [text],
             typeSpeed: 5,
             contentType: 'html',
         });
-        lastText = text;
+        lastTextRef.current = text;
     }
 
-    function formatIconMessage({ title, subtitle, description }: IconMessage) {
+    function formatIconMessage({ title, subtitle, description }: IconMessage): string {
         return `
             <span style="text-align: center; font-size: 1.8rem; color: #aaffff;"><p>${title}</p></span><br>
             <span style="text-align: center; font-size: 1.6rem; color: #ddffff;"><p>${subtitle}</p></span><br>
@@ -53,39 +49,38 @@ export default function Skills() {
         `;
     }
 
-    const [canShowDescription, setCanShowDescription] = useState(false);
+    useEffect(() => {
+        if (!activeSkill) {
+            if (!canShowDescription) {
+                animateText(formatIconMessage({
+                    title: "⚙️ Skill Descriptions ⚙️",
+                    subtitle: "💡 Interact with the page to enable it!",
+                    description: "",
+                }));
+            } else {
+                animateText(formatIconMessage({
+                    title: "⚙️ Skill Descriptions ⚙️",
+                    subtitle: "✅ Interaction enabled!",
+                    description: "Move cursor around icons to get quick information about the use of these technologies in my projects.",
+                }));
+            }
+        }
+    }, [activeSkill, canShowDescription]);
 
     useEffect(() => {
-        if (!canShowDescription) {
-            animateText(formatIconMessage({
-                title: "⚙️ Skill Descriptions ⚙️",
-                subtitle: "💡 Interact with the page to enable it!",
-                description: "",
-            }));
-        } else {
-            animateText(formatIconMessage({
-                title: "⚙️ Skill Descriptions ⚙️",
-                subtitle: "✅ Interaction enabled!",
-                description: "Move cursor around icons to get quick information about the use of these technologies in my projects.",
-            }));
-        }
-
-        const handleClick = () => {
-            setCanShowDescription(true);
-        }
-
+        const handleClick = () => setCanShowDescription(true);
         window.addEventListener("click", handleClick);
 
         return () => {
             window.removeEventListener("click", handleClick);
             typedRef.current?.destroy();
-        };
-    });
+        }; 
+    }, []);
 
     return (
         <section
             id="skills"
-            className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-[20rem] max-w-7xl mx-auto py-[1%] lg:py-[7.5%] mb-20"
+            className="grid grid-cols-1 lg:grid-cols-2 lg:gap-[20rem] max-w-7xl mx-auto py-[1%] lg:py-[7.5%] mb-20"
         >
             {/* First Column */}
             <div className="flex flex-col items-center">
@@ -94,15 +89,16 @@ export default function Skills() {
                 {/* Skills Data */}
                 <div className="flex flex-col gap-4 lg:gap-12">
                     {skillsData.map(({ category, skills }: SkillInfo) => (
-                        <div key={category} className="flex items-center gap-8">
+                        <div key={category} className="flex items-center gap-4 sm:gap-8">
                             {/* Category */}
-                            <h3 className="w-48 text-end text-[2.4rem] font-bold text-[#ddffff]">{category}</h3>
+                            <h3 className="w-48 text-end text-[1.6rem] sm:text-[2.4rem] font-bold text-[#ddffff]">{category}</h3>
                             {/* Skill Icons */}
-                            <div className="flex flex-wrap w-max p-4 bg-bg border border-bg-third rounded-[.8rem] justify-center">
+                            <div className="flex flex-wrap w-max p-2 sm:p-4 bg-bg border border-bg-third rounded-[.8rem] justify-center">
                                 {skills.map(({ label, title, subtitle, description }: IconData) => (
                                     <Image
                                         key={label}
-                                        className="mx-4 w-[40px] lg:w-[50px] h-auto transition-transform duration-300 ease-in-out hover:animate-swing"
+                                        className={`mx-1 sm:mx-4 w-[30px] sm:w-[40px] lg:w-[50px] h-auto transition-transform duration-300 ease-in-out hover:animate-swing
+                                                    ${activeSkill === label ? "animate-swing" : "hover:animate-swing"}`}
                                         src={`/images/icons/${label}.svg`}
                                         title={title}
                                         alt={label}
@@ -110,8 +106,9 @@ export default function Skills() {
                                         height="50"
                                         onMouseOver={() => {
                                             if (canShowDescription) {
+                                                if (activeSkill !== label) iconSnd();
                                                 animateText(formatIconMessage({ title, subtitle, description }));
-                                                iconSnd();
+                                                setActiveSkill(label);
                                             }
                                         }}
                                     />
@@ -138,7 +135,7 @@ export default function Skills() {
                 {/* Skill Box */}
                 <div
                     id="info"
-                    className="w-[45rem] h-128 px-4 py-4 text-[1.6rem] bg-bg-second border border-bg-third rounded-[.8rem]"
+                    className="w-[35rem] sm:w-[45rem] h-124 sm:h-128 px-4 py-4 text-[1.4rem] sm:text-[1.6rem] bg-bg-second border border-bg-third rounded-[.8rem]"
                 >
                     <span ref={infoRef} id="info-typed" />
                 </div>

@@ -24,11 +24,11 @@ html {
 }
 
 .my-quill .ql-editor {
-  @apply text-text font-poppins bg-bg-second border-none min-h-[300px] max-h-[300px] overflow-hidden;
+  @apply text-text font-poppins bg-bg-second border-none h-[175px] sm:h-[300px] overflow-hidden;
 }
 
 .my-quill .ql-blank::before {
-  @apply !text-text !opacity-50
+  @apply !text-text !opacity-50;
 }
 
 .my-quill .ql-toolbar {

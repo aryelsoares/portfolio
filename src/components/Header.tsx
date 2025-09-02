@@ -52,7 +52,7 @@ export default function Header() {
 
     return (
         <header
-            className={`sticky top-0 py-8 px-[9%] flex justify-between items-center bg-bg-second transition-all duration-300 border-b z-100 site-header ${
+            className={`sticky top-0 py-8 sm:px-[9%] flex justify-between items-center bg-bg-second transition-all duration-300 border-b z-100 site-header ${
                 isSticky ? "border-bg-third" : "border-transparent"
             }`}
         >
