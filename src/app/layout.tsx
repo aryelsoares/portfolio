@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   description: "Personal portfolio showcasing skills and projects related to data science, process automation and artificial intelligence.",
   authors: [{ name: "Aryel Soares" }],
   keywords: ["Portfolio", "C++", "Python", "JavaScript", "TypeScript", "Data Science", "Machine Learning"],
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
+  }
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
