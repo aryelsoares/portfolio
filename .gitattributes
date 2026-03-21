@@ -1,5 +1,5 @@
 # Ignore CSS stats
-.css linguist-vendored
+*.css linguist-vendored
 
 # Ignore JavaScript stats
-.js linguist-vendored
+*.js linguist-vendored
