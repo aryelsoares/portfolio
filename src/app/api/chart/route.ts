@@ -2,6 +2,19 @@ import { NextResponse } from "next/server";
 
 const blackList: string[] = ["Jupyter Notebook", "TeX", "Makefile"];
 
+type LanguageEdge = {
+    size: number;
+    node: {
+        name: string;
+    }
+}
+
+type Repository = {
+    languages: {
+        edges: LanguageEdge[];
+    }
+}
+
 export async function GET() {
     const username = "aryelsoares";
     const projAmount = 20;
@@ -42,10 +55,10 @@ export async function GET() {
 
         const { data } = await res.json();
         const repos = data.user.repositories.nodes;
-        let languageTotals: Record<string, number> = {};
+        const languageTotals: Record<string, number> = {};
 
-        repos.forEach((repo: any) => {
-            repo.languages.edges.forEach((langEdge: any) => {
+        repos.forEach((repo: Repository) => {
+            repo.languages.edges.forEach((langEdge: LanguageEdge) => {
                 const langName = langEdge.node.name;
                 const size = langEdge.size;
 
@@ -72,7 +85,10 @@ export async function GET() {
         
         return NextResponse.json(sorted);
 
-    } catch (error) {
-        return NextResponse.json({ error: "Failed to fetch data" }, { status: 500 });
+    } catch {
+        return NextResponse.json(
+          { error: "Failed to fetch data" },
+          { status: 500 }
+        );
     }
 }

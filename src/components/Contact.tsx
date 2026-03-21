@@ -124,6 +124,7 @@ export default function Contact() {
                     <div className="my-4 text-left">
                         <ClientOnly>
                             <ReactQuill
+                                id="message-editor"
                                 theme="snow"
                                 value={message}
                                 onChange={setMessage}

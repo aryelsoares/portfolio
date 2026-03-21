@@ -44,9 +44,13 @@ export default function Projects() {
                             <Image
                                 src={`/images/projects/${title}.png`}
                                 alt={title}
-                                className="object-cover rounded-lg"
-                                sizes="100vw"
                                 fill
+                                className="object-cover rounded-lg"
+                                sizes="
+                                    (max-width: 640px) 100vw,
+                                    (max-width: 1024px) 90vw,
+                                    1152px
+                                "
                             />
                             <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.5),#444546)] border border-bg-third rounded-lg flex flex-col justify-center items-center text-center px-16 py-0 translate-y-full transition-transform duration-1000 ease-in-out group-[.swiper-slide-active]:translate-y-0 will-change-transform">
                                 {/* Title */}
