@@ -61,16 +61,23 @@ export default function Header() {
                 <span className="hidden md:inline font-bold">Aryel Soares</span>
             </a>
             <nav className="flex-1 flex justify-center md:justify-end">
-                {navItems.map((item) => (
+                {navItems.map((item, index) => (
                     <a
                         key={item.id}
                         href={`#${item.id}`}
-                        className={`text-[1.4rem] md:text-[1.6rem] lg:text-[1.8rem] ml-8 md:ml-12 lg:ml-16 transition-colors duration-300 hover:text-main ${
-                            activeSection === item.id ? "text-main" : "text-text"
-                        }`}
                         onClick={hoverSnd}
+                        className={`
+                            relative
+                            text-[1.4rem] md:text-[1.6rem] lg:text-[1.8rem]
+                            ml-8 md:ml-12 lg:ml-16
+                            transition-colors duration-300
+                            hover:text-main
+                            ${activeSection === item.id ? "text-main" : "text-text"}
+                            ${index !== navItems.length - 1 ? "after:content-[''] after:absolute after:right-[-2rem] after:top-1/2 after:-translate-y-1/2 after:h-10 after:w-px after:bg-bg-third" : ""}
+                        `}
                     >
-                        <FontAwesomeIcon icon={item.icon} className="mr-2" aria-hidden="true" /> {item.label}
+                        <FontAwesomeIcon icon={item.icon} className="mr-2" />
+                        {item.label}
                     </a>
                 ))}
             </nav>

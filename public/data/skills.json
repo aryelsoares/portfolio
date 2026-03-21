@@ -3,10 +3,10 @@
         "category": "Backend",
         "skills": [
             {
-                "label": "cpp",
-                "title": "C++: Programming Language",
+                "label": "rust",
+                "title": "Rust: Programming Language",
                 "subtitle": "High Performance and Interoperability",
-                "description": "I use C++ to develop high-performance libraries and APIs, focusing on projects where efficiency and low-level control are essential, such as high-volume data processing and system optimization."
+                "description": "I was using C++ as a low-level language, but I migrated to Rust for memory safety and future proofing. I use Rust to develop high-performance libraries and APIs, focusing on projects where efficiency and low-level control are essential, such as high-volume data processing and system optimization."
             },
             {
                 "label": "python",
@@ -24,7 +24,7 @@
                 "label": "nodejs",
                 "title": "NodeJS: Backend Runtime Environment",
                 "subtitle": "Server-Side Development",
-                "description": "I use NodeJS to build fast and scalable backend services, enabling the development of RESTful APIs, real-time applications with WebSockets, and efficient database integrations."
+                "description": "I use NodeJS to build fast and scalable backend services when there is no need for heavy internal processing."
             }
         ]
     },

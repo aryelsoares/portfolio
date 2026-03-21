@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Typed from "typed.js";
 import skillsData from "../../public/data/skills.json";
+import ShowChart from "../components/Chart";
 import { useSound } from "../hooks/useSound";
 
 interface IconMessage {
@@ -120,18 +121,12 @@ export default function Skills() {
             </div>
             {/* Second Column */}
             <div className="self-center flex flex-col items-center gap-8">
+
                 {/* Stats */}
-                <div className="w-[45rem] flex justify-center">
-                    {/* eslint-disable @next/next/no-img-element */}
-                    <img
-                        src="https://github-readme-stats.vercel.app/api/top-langs?username=aryelsoares&layout=compact&langs_count=16&theme=dark&hide=jupyter%20notebook,tex"
-                        title="Language usage statistics"
-                        className="hidden lg:flex"
-                        alt="Concepts"
-                        width="280"
-                        height="280"
-                    />
+                <div className="w-[45rem] flex justify-center hidden lg:flex">
+                    <ShowChart />
                 </div>
+
                 {/* Skill Box */}
                 <div
                     id="info"
