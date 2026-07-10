@@ -1,5 +1,16 @@
 [
     {
+        "title": "ARIMA-Analyzer",
+        "description": "Interactive web application for time series analysis, automatic ARIMA model selection, and forecasting directly from CSV datasets.",
+        "info": ["Model settings and ETL process.",
+                 "Automatic stationarity and seasonality detection.",
+                 "Distribution, autocorrelation, residual analysis.",
+                 "Auto-ARIMA model selection.",
+                 "Interactive forecasting and statistical visualizations.",
+                 "Cloud deployment."],
+        "skills": ["nodejs", "typescript", "react", "tailwind"]
+    },
+    {
         "title": "Stringler",
         "description": "Modular NLP pipeline that processes text files, performing sentiment analysis, extracting statistics, and generating graphical reports automatically.",
         "info": ["Sentiment analysis and word frequency extraction.",

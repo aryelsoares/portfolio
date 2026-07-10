@@ -23,7 +23,7 @@ export default function Footer() {
         <footer className="px-[9%] py-8 bg-bg-second text-[1.6rem]">
             <div className="flex items-center justify-between gap-6">
                 {/* Left */}
-                <p>Copyright &copy; {currentYear} by Aryel | MIT License.</p>
+                <p className="opacity-80">Copyright &copy; {currentYear} by Aryel | MIT License.</p>
                 {/* Right */}
                 <div className="flex items-center gap-12">
                     {buttons.map(({ name, desc, link, icon }, index) => (
@@ -44,7 +44,7 @@ export default function Footer() {
                                 transition-all duration-300
                                 hover:text-main
                                 hover:shadow-[0_0_1.5rem_#444546]
-                                ${index !== buttons.length - 1 ? "after:content-[''] after:absolute after:right-[-1.5rem] after:top-1/2 after:-translate-y-1/2 after:h-10 after:w-px after:bg-bg-third" : ""}
+                                ${index !== buttons.length - 1 ? "after:content-[''] after:absolute after:-right-6 after:top-1/2 after:-translate-y-1/2 after:h-10 after:w-px after:bg-bg-third" : ""}
                             `}
                         >
                             <FontAwesomeIcon icon={icon} size="lg" aria-hidden="true" />

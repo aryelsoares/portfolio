@@ -110,15 +110,15 @@ export default function Contact() {
             <div className="flex flex-col items-center px-4 py-[5%] lg:py-[2.5%]">
                 <h2 className="text-[2.8rem] md:text-[3.4rem] lg:text-[3.8rem] mb-12 text-center text-[#bbffff]">Contact Form</h2>
 
-                <form className="max-w-[70rem] mx-auto my-4 text-center mb-12" action="#" autoComplete="off" onSubmit={handleSubmit} onReset={handleReset}>
+                <form className="max-w-280 mx-auto my-4 text-center mb-12" action="#" autoComplete="off" onSubmit={handleSubmit} onReset={handleReset}>
                     <div className="flex justify-between flex-wrap">
-                        <input className="w-[49%] p-[1rem] sm:p-[1.5rem] text-[1.6rem] bg-bg-second mx-0 my-[.7rem] border-[.1rem] border-solid border-bg-third rounded-[.8rem]"
+                        <input className="w-[49%] p-4 sm:p-6 text-[1.6rem] bg-bg-second mx-0 my-[.7rem] border-[.1rem] border-solid border-bg-third rounded-[.8rem]"
                         type="text" placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} minLength={5} maxLength={30} required />
-                        <input className="w-[49%] p-[1rem] sm:p-[1.5rem] text-[1.6rem] bg-bg-second mx-0 my-[.7rem] border-[.1rem] border-solid border-bg-third rounded-[.8rem]"
+                        <input className="w-[49%] p-4 sm:p-6 text-[1.6rem] bg-bg-second mx-0 my-[.7rem] border-[.1rem] border-solid border-bg-third rounded-[.8rem]"
                         type="email" placeholder="Email Address" value={email} onChange={(e) => setEmail(e.target.value)} minLength={5} maxLength={30} required />
                     </div>
                     <div>
-                        <input className="w-[100%] p-[1rem] sm:p-[1.5rem] text-[1.6rem] bg-bg-second mx-0 my-[.7rem] mb-12 border-[.1rem] border-solid border-bg-third rounded-[.8rem]"
+                        <input className="w-full p-4 sm:p-6 text-[1.6rem] bg-bg-second mx-0 my-[.7rem] mb-12 border-[.1rem] border-solid border-bg-third rounded-[.8rem]"
                         type="text" placeholder="Subject" value={subject} onChange={(e) => setSubject(e.target.value)} minLength={5} maxLength={60} required />
                     </div>
                     <div className="my-4 text-left">
@@ -136,7 +136,7 @@ export default function Contact() {
                         </ClientOnly>
                     </div>
                     <div className="flex justify-center gap-12 mb-20">
-                        <button className="inline-block text-[1.4rem] sm:text-[1.6rem] px-[1.8rem] sm:px-[2.8rem] py-[1rem] rounded-[4rem] bg-bg-third text-text font-semibold tracking-wide transition duration-500 hover:shadow-[0_0_2.5rem_#444546] hover:text-main mt-12 cursor-pointer"
+                        <button className="inline-block text-[1.4rem] sm:text-[1.6rem] px-[1.8rem] sm:px-[2.8rem] py-4 rounded-[4rem] bg-bg-third text-text font-semibold tracking-wide transition duration-500 hover:shadow-[0_0_2.5rem_#444546] hover:text-main mt-12 cursor-pointer"
                         type="submit" title="Send Message to Aryel" onClick={hoverSnd} disabled={isSending}>
                             {!isSending ? (
                                 <>
@@ -153,7 +153,7 @@ export default function Contact() {
                                 </>
                             )}
                         </button>
-                        <button className="inline-block text-[1.4rem] sm:text-[1.6rem] px-[1.8rem] sm:px-[2.8rem] py-[1rem] rounded-[4rem] bg-bg-third text-text font-semibold tracking-wide transition duration-500 hover:shadow-[0_0_2.5rem_#444546] hover:text-main mt-12 cursor-pointer"
+                        <button className="inline-block text-[1.4rem] sm:text-[1.6rem] px-[1.8rem] sm:px-[2.8rem] py-4 rounded-[4rem] bg-bg-third text-text font-semibold tracking-wide transition duration-500 hover:shadow-[0_0_2.5rem_#444546] hover:text-main mt-12 cursor-pointer"
                         type="reset" title="Clear all inputs" onClick={eraseSnd} disabled={isSending}>
                             <FontAwesomeIcon icon={faEraser} className="mr-2" aria-hidden="true" /> Reset
                         </button>

@@ -22,7 +22,7 @@ export default function About() {
     ];
 
     return (
-        <section id="about" className="flex flex-col-reverse lg:flex-row px-[12.5%] py-[5%] lg:py-[10%] justify-between items-center gap-12 mb-50">
+        <section id="about" className="flex flex-col-reverse lg:flex-row px-[12.5%] py-[5%] lg:py-[8%] justify-between items-center gap-12">
             {/* Text */}
             <div className="flex-1">
                 <p className="text-[1.4rem] sm:text-[1.6rem] md:text-[2rem] lg:text-[2.4rem] text-center lg:text-left font-bold text-[#ddffff]">👋 Hi! My name is</p>
@@ -30,19 +30,22 @@ export default function About() {
                 <h2 className="text-[1.4rem] sm:text-[1.6rem] md:text-[2rem] lg:text-[2.4rem] text-center lg:text-left font-bold mb-8 text-[#eeffff]">💼 Backend Developer | <span className="text-[#ddffff]">Freelancer</span></h2>
 
                 <p className="text-[1.2rem] sm:text-[1.4rem] md:text-[1.5rem] lg:text-[1.6rem] my-4">
-                    🧠 I am a backend-focused programmer dedicated to solving business problems.
+                    I am a backend-oriented programmer focused on designing and implementing solutions
+                    that address real business constraints such as performance, scalability, and data
+                    reliability.
                 </p>
 
                 <p className="text-[1.2rem] sm:text-[1.4rem] md:text-[1.5rem] lg:text-[1.6rem] my-4">
-                    🎓 Graduated in applied mathematics, 🛠️ I specialize in building tailored solutions for a
-                    wide range of business challenges, combining 📊 data-driven thinking with 🧩 flexible
-                    problem-solving across domains like 🔄 automation, 📈 analytics, and 🤖 AI.
+                    I hold a degree in Applied Mathematics and work at the intersection of software
+                    engineering and data analysis, developing custom systems for automation, analytics,
+                    and intelligent decision support.
                 </p>
 
                 <p className="text-[1.2rem] sm:text-[1.4rem] md:text-[1.5rem] lg:text-[1.6rem] my-4">
-                    💻 With a strong background in backend development, I adapt quickly to diverse challenges
-                    across different industries, always aiming to deliver ⚡ efficient, 📐 scalable, and 🎯
-                    impactful solutions.
+                    I work mainly with backend systems, taking ownership of core application logic
+                    and infrastructure, while also handling frontend integration when needed. I actively
+                    assist in incorporating AI solutions into products to streamline workflows and
+                    increase overall productivity.
                 </p>
 
                 <div className="flex justify-center lg:justify-start gap-4 md:gap-10 lg:gap-12 mt-12">
@@ -51,7 +54,7 @@ export default function About() {
                             href={link}
                             key={name}
                             title={desc}
-                            className="inline-flex items-center text-[1.2rem] sm:text-[1.4rem] md:text-[1.5rem] lg:text-[1.6rem] px-[2rem] md:px-[2.8rem] py-4 rounded-[4rem] bg-bg-third text-text font-semibold tracking-wide transition duration-500 hover:shadow-[0_0_2.5rem_#444546] hover:text-main"
+                            className="inline-flex items-center text-[1.2rem] sm:text-[1.4rem] md:text-[1.5rem] lg:text-[1.6rem] px-8 md:px-[2.8rem] py-4 rounded-[4rem] bg-bg-third text-text font-semibold tracking-wide transition duration-500 hover:shadow-[0_0_2.5rem_#444546] hover:text-main"
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={clickSnd}
@@ -66,9 +69,10 @@ export default function About() {
                 <Image
                     src="/images/About.png"
                     alt="Aryel"
-                    className="border-[.2rem] border-solid border-bg-third rounded-[10%] w-[200px] md:w-[400px] lg:min-w-[32rem] lg:w-[500px] h-auto"
+                    className="border-[.2rem] border-solid border-bg-third rounded-[10%] w-80 md:w-160 lg:min-w-lg lg:w-200 h-auto"
                     width="500"
                     height="500"
+                    priority
                 />
             </div>
         </section>

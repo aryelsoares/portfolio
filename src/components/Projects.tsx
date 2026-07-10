@@ -22,6 +22,7 @@ interface ProjectInfo {
 
 export default function Projects() {
     const swipeSnd = useSound("swipe");
+    const clickSnd = useSound("click");
 
     return (
         <section id="projects" className="text-center px-4 py-[5%] lg:py-[2.5%] mb-12">
@@ -39,7 +40,7 @@ export default function Projects() {
             >
                 {projectsData.map(({ title, description, info, skills }: ProjectInfo) => (
                     <SwiperSlide key={title} className="group">
-                        <div className="relative w-full h-[40rem] sm:h-[55rem] flex justify-center items-center">
+                        <div className="relative w-full h-160 sm:h-220 flex justify-center items-center">
                             {/* Project Image */}
                             <Image
                                 src={`/images/projects/${title}.png`}
@@ -72,14 +73,12 @@ export default function Projects() {
                                 {/* Skills  */}
                                 <div>
                                     {skills.map((skill, index) => (
-                                        <Image
+                                        <img
                                             key={`${skill}-${index}`}
-                                            className="m-2 inline-block w-[35px] sm:w-[50px] h-auto"
+                                            className="m-2 inline-block w-15 sm:w-20 h-auto"
                                             src={`/images/icons/${skill}.svg`}
                                             title={skill}
                                             alt={skill}
-                                            width={50}
-                                            height={50}
                                         />
                                     ))}
                                 </div>
@@ -91,10 +90,11 @@ export default function Projects() {
             {/* GitHub Button */}
             <a
                 href="https://github.com/aryelsoares?tab=repositories"
-                className="inline-block text-[1.6rem] px-[2.8rem] py-[1rem] mt-20 mb-8 rounded-[4rem] bg-bg-third text-text font-semibold tracking-wide transition duration-500 hover:shadow-[0_0_2.5rem_#444546] hover:text-main"
+                className="inline-block text-[1.6rem] px-[2.8rem] py-4 mt-20 mb-8 rounded-[4rem] bg-bg-third text-text font-semibold tracking-wide transition duration-500 hover:shadow-[0_0_2.5rem_#444546] hover:text-main"
                 title="Check all projects in GitHub"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={clickSnd}
             >
                 <FontAwesomeIcon icon={faGithub} className="mr-4" aria-hidden="true" />GitHub Repository
             </a>

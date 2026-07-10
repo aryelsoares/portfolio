@@ -15,10 +15,22 @@
                 "description": "I use Python to build data pipelines, perform data analysis, develop machine learning models, and automate workflows in data-driven environments."
             },
             {
+                "label": "pytorch",
+                "title": "PyTorch: AI and Deep Learning Framework",
+                "subtitle": "Model Execution and AI Workflows",
+                "description": "I use PyTorch mainly to run and integrate modern AI models, including large language models and other deep learning applications. My experience focuses on inference, experimentation, and AI workflows rather than building and training custom neural network architectures."
+            },
+            {
                 "label": "tensorflow",
                 "title": "TensorFlow: Deep Learning Framework",
                 "subtitle": "Neural Network Modeling",
                 "description": "I use TensorFlow to design and train deep learning models in Python, applied to tasks such as time series forecasting, synthetic data generation, and AI experimentation with sequential and generative architectures."
+            },
+            {
+                "label": "flask",
+                "title": "Flask: Python Web Framework",
+                "subtitle": "Lightweight Backend and REST API Development",
+                "description": "I use flask to build lightweight web applications and RESTful APIs, focusing on modular architecture and backend logic. It integrates well with databases, authentication systems, and AI services, making it a practical choice for custom backend solutions."
             },
             {
                 "label": "nodejs",
@@ -96,6 +108,18 @@
                 "description": "PostgreSQL is my preferred choice for scalable and robust data management solutions. I use it in production environments, often with Docker-based setups, due to its reliability, advanced features, and strong SQL compliance."
             },
             {
+                "label": "sqlite",
+                "title": "SQLite: Embedded Relational Database",
+                "subtitle": "Lightweight Storage for Standalone Applications",
+                "description": "I use SQLite as an embedded relational database for desktop applications, prototypes, and small-scale systems. Its serverless architecture and portability make it an efficient choice for local data storage, testing, and lightweight backend solutions."
+            },
+            {
+                "label": "mongodb",
+                "title": "MongoDB: NoSQL Document Database",
+                "subtitle": "Flexible schema for Modern Applications",
+                "description": "I use MongoDB to store and manage document-oriented data in applications that require flexible schemas and rapid iteration. Its scalability and JSON-like document model make it well-suited for APIs, analytics, and AI-driven systems."
+            },
+            {
                 "label": "influxdb",
                 "title": "InfluxDB: Time Series Database",
                 "subtitle": "Real-Time Data Monitoring",
@@ -106,6 +130,12 @@
     {
         "category": "Tools",
         "skills": [
+            {
+                "label": "ollama",
+                "title": "Ollama: Local Large Language Models",
+                "subtitle": "On-Premise AI Inference and Integration",
+                "description": "I use ollama to run and integrate large language models locally, enabling AI-powered features while maintaining data privacy and low latency. It is particularly useful for building intelligent applications without relying exclusively on cloud-based AI services."
+            },
             {
                 "label": "grafana",
                 "title": "Grafana: Data Visualization Platform",

@@ -73,7 +73,7 @@ export default function Header() {
                             transition-colors duration-300
                             hover:text-main
                             ${activeSection === item.id ? "text-main" : "text-text"}
-                            ${index !== navItems.length - 1 ? "after:content-[''] after:absolute after:right-[-2rem] after:top-1/2 after:-translate-y-1/2 after:h-10 after:w-px after:bg-bg-third" : ""}
+                            ${index !== navItems.length - 1 ? "after:content-[''] after:absolute after:-right-8 after:top-1/2 after:-translate-y-1/2 after:h-10 after:w-px after:bg-bg-third" : ""}
                         `}
                     >
                         <FontAwesomeIcon icon={item.icon} className="mr-2" />

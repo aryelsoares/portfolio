@@ -2,7 +2,6 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import Image from "next/image";
 import Typed from "typed.js";
 import skillsData from "../../public/data/skills.json";
 import ShowChart from "../components/Chart";
@@ -81,7 +80,7 @@ export default function Skills() {
     return (
         <section
             id="skills"
-            className="grid grid-cols-1 lg:grid-cols-2 lg:gap-[20rem] max-w-7xl mx-auto py-[1%] lg:py-[7.5%] mb-20"
+            className="grid grid-cols-1 lg:grid-cols-2 max-w-400 mx-auto gap-12 lg:gap-42 py-[1%] lg:py-[6.5%] mb-20"
         >
             {/* First Column */}
             <div className="flex flex-col items-center">
@@ -94,17 +93,15 @@ export default function Skills() {
                             {/* Category */}
                             <h3 className="w-48 text-end text-[1.6rem] sm:text-[2.4rem] font-bold text-[#ddffff]">{category}</h3>
                             {/* Skill Icons */}
-                            <div className="flex flex-wrap w-max p-2 sm:p-4 bg-bg border border-bg-third rounded-[.8rem] justify-center">
+                            <div className="flex flex-wrap w-max p-2 sm:p-4 bg-[#212121] border border-bg-third rounded-[.8rem] justify-center">
                                 {skills.map(({ label, title, subtitle, description }: IconData) => (
-                                    <Image
+                                    <img
                                         key={label}
-                                        className={`mx-1 sm:mx-4 w-[30px] sm:w-[40px] lg:w-[50px] h-auto transition-transform duration-300 ease-in-out hover:animate-swing
+                                        className={`mx-1 sm:mx-4 w-10 sm:w-15 lg:w-20 h-auto transition-transform duration-300 ease-in-out hover:animate-swing
                                                     ${activeSkill === label ? "animate-swing" : "hover:animate-swing"}`}
                                         src={`/images/icons/${label}.svg`}
                                         title={title}
                                         alt={label}
-                                        width="50"
-                                        height="50"
                                         onMouseOver={() => {
                                             if (canShowDescription) {
                                                 if (activeSkill !== label) iconSnd();
@@ -123,14 +120,14 @@ export default function Skills() {
             <div className="self-center flex flex-col items-center gap-8">
 
                 {/* Stats */}
-                <div className="w-[45rem] flex justify-center hidden lg:flex">
+                <div className="w-180 justify-center hidden lg:flex">
                     <ShowChart />
                 </div>
 
                 {/* Skill Box */}
                 <div
                     id="info"
-                    className="w-[35rem] sm:w-[45rem] h-124 sm:h-128 px-4 py-4 text-[1.4rem] sm:text-[1.6rem] bg-bg-second border border-bg-third rounded-[.8rem]"
+                    className="w-140 sm:w-180 h-124 sm:h-128 px-4 py-4 text-[1.4rem] sm:text-[1.6rem] bg-bg-second border border-bg-third rounded-[.8rem]"
                 >
                     <span ref={infoRef} id="info-typed" />
                 </div>

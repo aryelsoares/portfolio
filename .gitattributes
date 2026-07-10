@@ -3,3 +3,4 @@
 
 # Ignore JavaScript stats
 *.js linguist-vendored
+*.mjs linguist-vendored
