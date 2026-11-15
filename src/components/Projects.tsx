@@ -38,7 +38,7 @@ export default function Projects() {
                 onSlideChange={swipeSnd}
                 className="max-w-6xl mx-auto bg-bg border border-bg-third rounded-[.8rem]"
             >
-                {projectsData.map(({ title, description, info, skills }: ProjectInfo) => (
+                {projectsData.map(({ title, description, info, skills }: ProjectInfo, index) => (
                     <SwiperSlide key={title} className="group">
                         <div className="relative w-full h-160 sm:h-220 flex justify-center items-center">
                             {/* Project Image */}
@@ -46,6 +46,7 @@ export default function Projects() {
                                 src={`/images/projects/${title}.png`}
                                 alt={title}
                                 fill
+                                loading={index === 0 ? "eager" : "lazy"}
                                 className="object-cover rounded-lg"
                                 sizes="
                                     (max-width: 640px) 100vw,
@@ -53,7 +54,7 @@ export default function Projects() {
                                     1152px
                                 "
                             />
-                            <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.5),#444546)] border border-bg-third rounded-lg flex flex-col justify-center items-center text-center px-16 py-0 translate-y-full transition-transform duration-1000 ease-in-out group-[.swiper-slide-active]:translate-y-0 will-change-transform">
+                            <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.85),#444546)] border border-bg-third rounded-lg flex flex-col justify-center items-center text-center px-16 py-0 translate-y-full transition-transform duration-1000 ease-in-out group-[.swiper-slide-active]:translate-y-0 will-change-transform">
                                 {/* Title */}
                                 <a
                                     className="text-[2.4rem] sm:text-[2.6rem] md:text-[2.8rem] lg:text-[3rem] text-[#ccffff] transition duration-300 hover:text-main"

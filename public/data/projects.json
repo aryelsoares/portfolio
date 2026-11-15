@@ -1,5 +1,16 @@
 [
     {
+        "title": "Clustio",
+        "description": "Automated unsupervised machine learning application designed to perform data clustering on CSV files.",
+        "info": ["Multiple Clustering Algorithms.",
+                 "Automated Parameter Search.",
+                 "Model Evaluation and Combined Evaluation Score.",
+                 "Dimensionality Reduction with PCA.",
+                 "Interactive Cluster Visualization and result export.",
+                 "MongoDB Caching."],
+        "skills": ["python", "flask", "mongodb", "typescript", "react", "tailwind"]
+    },
+    {
         "title": "ARIMA-Analyzer",
         "description": "Interactive web application for time series analysis, automatic ARIMA model selection, and forecasting directly from CSV datasets.",
         "info": ["Model settings and ETL process.",
